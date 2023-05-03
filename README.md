@@ -33,8 +33,8 @@ curl --location --request PATCH 'http://127.0.0.1:8000/orders/update/3/' \
 
 > :warning: **If you are using signal to update elasticsearch, then things can be slow if time taken is long**: Be very careful here!
 
-### Here is following findings about Signals in Django
- 
+### Here are some findings about Signals in Django
+
 Django signals are synchronous and run in the same thread as the code that triggers them. When a signal is sent, all of the receivers for that signal are executed in the order in which they were connected.
 Here's a brief overview of Django's signal architecture:
 
