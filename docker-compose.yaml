@@ -1,0 +1,20 @@
+version: '3.5'
+
+services:
+  esearch:
+    container_name: estest1
+    image: elasticsearch:7.14.2
+    environment:
+      - discovery.type=single-node
+    ports:
+      - "9200:9200"
+  
+  zookeeper:
+    image: wurstmeister/zookeeper:latest
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - 2181:2181
+      - 2888:2888
+      - 3888:3888
