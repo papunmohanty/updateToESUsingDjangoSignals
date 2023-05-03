@@ -2,7 +2,7 @@
 
 ## Commands
 
-Create Elastic Search Indexes from Django command
+Create Elastic Search Indexes from Django's command
 ```sh
 python manage.py search_index --create
 ```
